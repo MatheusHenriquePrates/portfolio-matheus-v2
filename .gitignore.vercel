@@ -1,3 +1,6 @@
+# .gitignore otimizado para deploy na Vercel
+# Use este arquivo renomeando para .gitignore antes do deploy
+
 # Dependências
 /node_modules
 /.pnp
@@ -7,7 +10,7 @@
 /coverage
 *.test.js.snap
 
-# Build de Produção
+# Build de Produção (Vercel gera automaticamente)
 /build
 /dist
 /.next
@@ -25,6 +28,9 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+*.swp
+*.swo
+*~
 
 # Logs
 npm-debug.log*
@@ -33,17 +39,14 @@ yarn-error.log*
 lerna-debug.log*
 *.log
 
-# IDEs e Editores
+# IDEs e Editores (mantém configurações locais)
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
+*.sublime-project
+*.sublime-workspace
 .project
 .classpath
 .settings/
-*.sublime-project
-*.sublime-workspace
 
 # Arquivos temporários
 *.tmp
@@ -53,7 +56,6 @@ lerna-debug.log*
 
 # Debug
 debug.log
-npm-debug.log
 
 # Backups
 *.backup

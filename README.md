@@ -1,70 +1,231 @@
-# Getting Started with Create React App
+# Portfólio Profissional - Matheus Henrique Prates
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfólio pessoal desenvolvido com React, apresentando projetos, experiências profissionais, certificações e habilidades técnicas. O site conta com design moderno, animações suaves e interface totalmente responsiva.
 
-## Available Scripts
+## Sobre o Projeto
 
-In the project directory, you can run:
+Este portfólio foi desenvolvido para apresentar de forma profissional e interativa minha trajetória na área de TI, destacando projetos relevantes, experiências de trabalho e certificações obtidas. O site utiliza tecnologias modernas e oferece uma experiência de usuário fluida e agradável.
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Core
+- **React 18** - Biblioteca JavaScript para construção de interfaces
+- **React DOM** - Renderização de componentes React no DOM
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Animações e UI
+- **Framer Motion** - Biblioteca de animações para React
+- **Swiper** - Carrossel touch-friendly e responsivo
+- **React Icons** - Biblioteca de ícones
 
-### `npm test`
+### Estilização
+- **CSS3** - Estilização customizada
+- **Tailwind CSS** - Framework CSS utility-first
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Ferramentas de Desenvolvimento
+- **Create React App** - Setup e configuração do projeto
+- **Web Vitals** - Medição de performance
 
-### `npm run build`
+## Estrutura do Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+portfolio-matheus-v2/
+├── public/
+│   ├── images/
+│   │   ├── projects/        # Imagens dos projetos
+│   │   └── certifications/  # Imagens das certificações
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Navbar/          # Barra de navegação
+│   │   ├── Hero/            # Seção inicial
+│   │   ├── About/           # Sobre mim e experiências
+│   │   ├── Projects/        # Portfólio de projetos
+│   │   ├── Skills/          # Certificações e habilidades
+│   │   ├── Footer/          # Rodapé
+│   │   └── ScrollToTop/     # Botão de scroll
+│   ├── data/
+│   │   ├── personalData.js       # Dados pessoais
+│   │   ├── experienceData.js     # Experiências profissionais
+│   │   ├── projectsData.js       # Projetos desenvolvidos
+│   │   └── certificationsData.js # Certificações e skills
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+└── package.json
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Funcionalidades
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Navegação
+- Barra de navegação fixa com efeito de scroll
+- Menu mobile responsivo com animações
+- Navegação suave entre seções (smooth scroll)
+- Botão flutuante para retornar ao topo
 
-### `npm run eject`
+### Seção Hero
+- Animação de digitação (typewriter) com múltiplas especialidades
+- Apresentação profissional com nome e descrição
+- Indicador de scroll animado
+- Animações de entrada com Framer Motion
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Sobre Mim
+- Biografia profissional em múltiplos parágrafos
+- Carrossel interativo de experiências profissionais
+- Navegação por setas e indicadores de progresso
+- Animações de transição entre experiências
+- Exibição de skills, período e impacto de cada experiência
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Projetos
+- Carrossel responsivo de projetos (Swiper)
+- Cards com thumbnail, categoria e tecnologias
+- Modal detalhado para cada projeto
+- Galeria de imagens com navegação
+- Links para repositórios GitHub e demos live
+- Descrição completa, funcionalidades e desafios
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Certificações e Habilidades
+- Carrossel de certificações profissionais
+- Visualização em tela cheia de certificados
+- Habilidades técnicas organizadas por categoria
+- Lista de cursos complementares
+- Links para validação de credenciais
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Rodapé
+- Informações de contato completas
+- Links para redes sociais
+- Navegação rápida para seções
+- Copyright dinâmico com ano atual
 
-## Learn More
+## Instalação e Execução
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Pré-requisitos
+- Node.js (versão 14 ou superior)
+- npm ou yarn
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Instalação
 
-### Code Splitting
+1. Clone o repositório:
+```bash
+git clone https://github.com/MatheusHenriquePrates/portfolio-matheus-v2.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Acesse o diretório do projeto:
+```bash
+cd portfolio-matheus-v2
+```
 
-### Analyzing the Bundle Size
+3. Instale as dependências:
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Executar em Desenvolvimento
 
-### Making a Progressive Web App
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+O site será aberto automaticamente em [http://localhost:3000](http://localhost:3000).
 
-### Advanced Configuration
+### Build para Produção
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run build
+```
 
-### Deployment
+Cria uma versão otimizada para produção na pasta `build/`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Executar Testes
 
-### `npm run build` fails to minify
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Inicia o test runner no modo interativo.
+
+## Personalização
+
+Para personalizar o portfólio com suas próprias informações:
+
+### 1. Informações Pessoais
+Edite `src/data/personalData.js`:
+- Nome, cargo, localização e contatos
+- Links para redes sociais
+- Especialidades para animação de digitação
+- Biografia profissional
+
+### 2. Experiências Profissionais
+Edite `src/data/experienceData.js`:
+- Adicione ou remova experiências
+- Cada experiência deve conter: período, cargo, empresa, descrição, skills e impacto
+
+### 3. Projetos
+Edite `src/data/projectsData.js`:
+- Adicione seus projetos pessoais
+- Configure imagens, tecnologias, descrições e links
+- Imagens devem estar em `public/images/projects/`
+
+### 4. Certificações
+Edite `src/data/certificationsData.js`:
+- Adicione certificações profissionais
+- Configure habilidades técnicas por categoria
+- Adicione cursos complementares
+- Imagens devem estar em `public/images/certifications/`
+
+### 5. Estilos
+Cada componente possui seu próprio arquivo CSS:
+- Cores, fontes e espaçamentos podem ser ajustados
+- Variáveis CSS estão definidas em `index.css`
+
+## Deploy
+
+O projeto pode ser hospedado em diversas plataformas:
+
+### Vercel
+```bash
+npm install -g vercel
+vercel
+```
+
+### Netlify
+```bash
+npm run build
+# Faça upload da pasta build/ no Netlify
+```
+
+### GitHub Pages
+```bash
+npm install gh-pages --save-dev
+npm run build
+npm run deploy
+```
+
+## Performance
+
+O site foi otimizado para performance:
+- Lazy loading de imagens
+- Code splitting automático
+- Minificação de CSS e JavaScript
+- Otimização de assets
+- Animações com GPU acceleration
+
+## Compatibilidade
+
+- Chrome (versão mais recente)
+- Firefox (versão mais recente)
+- Safari (versão mais recente)
+- Edge (versão mais recente)
+- Dispositivos mobile (iOS e Android)
+
+## Contato
+
+**Matheus Henrique Prates**
+
+- Email: mathues12398henrique@gmail.com
+- LinkedIn: [matheus-henrique-prates](https://www.linkedin.com/in/matheus-henrique-prates-586328234/)
+- GitHub: [MatheusHenriquePrates](https://github.com/MatheusHenriquePrates)
+
+## Licença
+
+Este projeto está sob licença MIT. Sinta-se livre para usar como base para seu próprio portfólio.

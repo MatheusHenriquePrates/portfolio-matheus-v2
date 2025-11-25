@@ -1,0 +1,347 @@
+.skills-section {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #141414 0%, #0A0A0A 100%);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Área de Certificações */
+.certifications-area {
+  margin-bottom: 6rem;
+}
+
+.cert-display {
+  margin-top: 3rem;
+}
+
+.cert-card {
+  background: linear-gradient(135deg, #1F1F1F 0%, #141414 100%);
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Imagem do Certificado */
+.cert-image-container {
+  flex-shrink: 0;
+}
+
+.cert-placeholder {
+  width: 300px;
+  height: 220px;
+  background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.cert-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cert-placeholder svg {
+  position: relative;
+  z-index: 1;
+}
+
+/* Info do Certificado */
+.cert-info {
+  flex: 1;
+}
+
+.cert-issuer {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  border-radius: 20px;
+  color: #0066FF;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cert-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.cert-date {
+  color: #999999;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cert-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #CCCCCC;
+  margin-bottom: 1.5rem;
+}
+
+/* Skills do Certificado */
+.cert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.cert-skill-badge {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  border-radius: 20px;
+  color: #0066FF;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cert-credential {
+  color: #999999;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Navegação de Certificados */
+.cert-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cert-nav-btn {
+  padding: 0.75rem 1.5rem;
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  border-radius: 10px;
+  color: #0066FF;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cert-nav-btn:hover:not(:disabled) {
+  background: rgba(0, 102, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.cert-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.cert-counter {
+  color: #0066FF;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Habilidades Técnicas */
+.skills-area {
+  margin-bottom: 4rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.skill-category {
+  background: rgba(0, 102, 255, 0.05);
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.skill-category-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0066FF;
+  margin-bottom: 1.5rem;
+}
+
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skill-item {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #0066FF;
+  border-radius: 8px;
+  color: #CCCCCC;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background: rgba(0, 102, 255, 0.1);
+  transform: translateX(5px);
+}
+
+/* Cursos Adicionais */
+.additional-courses {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 102, 255, 0.05);
+  border-radius: 16px;
+  border: 1px dashed rgba(0, 102, 255, 0.3);
+}
+
+.additional-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.additional-list {
+  font-size: 1rem;
+  color: #999999;
+  line-height: 1.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .cert-card {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .cert-placeholder {
+    width: 100%;
+    height: 180px;
+  }
+
+  .cert-title {
+    font-size: 1.4rem;
+  }
+
+  .cert-navigation {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Modal de Imagem em Tela Cheia */
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 2rem;
+  cursor: zoom-out;
+}
+
+.image-modal-close {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.image-modal-close:hover {
+  background: rgba(0, 102, 255, 0.8);
+  transform: rotate(90deg);
+  border-color: #0066FF;
+}
+
+.image-modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  cursor: default;
+}
+
+/* Adicionar cursor pointer na imagem */
+.cert-image-container {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cert-image-container:hover {
+  transform: scale(1.05);
+}
+
+/* Responsividade do Modal */
+@media (max-width: 768px) {
+  .image-modal-overlay {
+    padding: 1rem;
+  }
+
+  .image-modal-close {
+    width: 40px;
+    height: 40px;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .image-modal-content {
+    max-width: 95%;
+    max-height: 95%;
+  }
+}

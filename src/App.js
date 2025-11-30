@@ -1,10 +1,11 @@
 /**
  * Componente principal da aplicação
- *
+ * 
  * Este componente é o ponto de entrada da aplicação e gerencia a estrutura
  * completa do portfólio. Renderiza todas as seções principais em ordem sequencial.
- *
+ * 
  * Estrutura da aplicação:
+ * 
  * - Navbar: Barra de navegação fixa com links para as seções
  * - Hero: Seção inicial com apresentação e animação de digitação
  * - About: Biografia e jornada profissional
@@ -22,6 +23,7 @@ import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Chat from './components/Chatbot/Chat';
 import './App.css';
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
       <Skills />
       <Footer />
       <ScrollToTop />
+      <Chat />
     </div>
   );
 }

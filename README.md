@@ -21,6 +21,11 @@ Este portfólio foi desenvolvido para apresentar de forma profissional e interat
 - **CSS3** - Estilização customizada
 - **Tailwind CSS** - Framework CSS utility-first
 
+### Inteligência Artificial
+- **N8N** - Automação e orquestração do workflow do chatbot
+- **Groq API** - Processamento de linguagem natural com LLaMA 3.3-70B
+- **Supabase PostgreSQL** - Armazenamento de histórico de conversas
+
 ### Ferramentas de Desenvolvimento
 - **Create React App** - Setup e configuração do projeto
 - **Web Vitals** - Medição de performance
@@ -41,6 +46,7 @@ portfolio-matheus-v2/
 │   │   ├── About/           # Sobre mim e experiências
 │   │   ├── Projects/        # Portfólio de projetos
 │   │   ├── Skills/          # Certificações e habilidades
+│   │   ├── Chat/            # Chatbot com IA
 │   │   ├── Footer/          # Rodapé
 │   │   └── ScrollToTop/     # Botão de scroll
 │   ├── data/
@@ -90,6 +96,13 @@ portfolio-matheus-v2/
 - Habilidades técnicas organizadas por categoria
 - Lista de cursos complementares
 - Links para validação de credenciais
+
+### Chatbot com IA
+- Assistente virtual integrado ao portfólio
+- Interface conversacional com design moderno
+- Histórico de conversas persistente por sessão
+- Respostas contextualizadas sobre experiências e projetos
+- Botão flutuante de acesso rápido
 
 ### Rodapé
 - Informações de contato completas
@@ -200,6 +213,76 @@ npm install gh-pages --save-dev
 npm run build
 npm run deploy
 ```
+
+## Chatbot com Inteligência Artificial
+
+O portfólio integra um assistente virtual inteligente que responde perguntas sobre experiências profissionais, projetos e habilidades técnicas.
+
+### Arquitetura do Chatbot
+
+#### Backend (N8N)
+Workflow automatizado implantado no Render.com com os seguintes componentes:
+- **Webhook Endpoint**: Recebe requisições POST em `/webhook/chat`
+- **Extração de Dados**: Processa mensagem do usuário e sessionId
+- **Recuperação de Histórico**: Busca conversas anteriores no banco de dados
+- **Formatação de Contexto**: Prepara histórico para o modelo de IA
+- **Geração de Resposta**: Utiliza Groq API com modelo LLaMA 3.3-70B Versatile
+- **Persistência**: Armazena conversas no banco de dados
+- **Retorno de Resposta**: Envia resposta formatada ao frontend
+
+#### Banco de Dados (Supabase PostgreSQL)
+Tabela `chat_history` com estrutura:
+- `id`: Identificador único da mensagem
+- `session_id`: Identificador da sessão do usuário
+- `role`: Tipo de mensagem (user/assistant)
+- `message`: Conteúdo da mensagem
+- `created_at`: Timestamp da mensagem
+
+#### Modelo de IA (Groq API)
+- **Modelo**: LLaMA 3.3-70B Versatile
+- **System Prompt**: Contextualizado com perfil profissional, stack tecnológica e experiências
+- **Idioma**: Respostas em português brasileiro
+- **Contexto**: Mantém histórico completo da conversa
+
+#### Frontend (React)
+Componente `Chat.jsx` com funcionalidades:
+- Interface conversacional moderna com design gradiente roxo
+- Gerenciamento de sessões via localStorage
+- Integração com API do N8N via requisições HTTP
+- Feedback visual de digitação e estados de loading
+- Botão flutuante de acesso rápido
+
+### Configuração do Chatbot
+
+Para configurar o chatbot em sua própria instância:
+
+1. **Backend N8N**:
+   - Crie conta no [Render.com](https://render.com)
+   - Implante workflow N8N (template disponível)
+   - Configure variáveis de ambiente para Groq API e Supabase
+
+2. **Banco de Dados**:
+   - Crie projeto no [Supabase](https://supabase.com)
+   - Execute script SQL para criar tabela `chat_history`
+   - Configure credenciais de conexão no N8N
+
+3. **API de IA**:
+   - Obtenha chave de API no [Groq](https://groq.com)
+   - Configure credenciais no workflow N8N
+   - Personalize system prompt com suas informações
+
+4. **Frontend**:
+   - Configure URL do webhook no arquivo `Chat.jsx`
+   - Personalize design e mensagens no componente
+
+### Variáveis de Ambiente
+
+Crie arquivo `.env.local` com:
+```
+REACT_APP_CHATBOT_API_URL=sua_url_do_webhook_n8n
+```
+
+**IMPORTANTE**: Nunca commite arquivos `.env` com credenciais reais no repositório.
 
 ## Performance
 

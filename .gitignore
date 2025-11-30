@@ -69,6 +69,17 @@ credentials.json
 secrets.json
 *.env.vault
 
+# Configurações do Chatbot (N8N, Groq, Supabase)
+config/chatbot.json
+n8n-workflow.json
+groq-api-key.txt
+supabase-credentials.json
+chatbot-config.json
+
+# URLs e endpoints sensíveis
+webhook-urls.txt
+api-endpoints.txt
+
 # Outros
 .eslintcache
 .turbo
